@@ -57,6 +57,8 @@ public class ProjectConfigV1
     public int? GatewayPort { get; set; }
     public string ReleaseEnvironmentConfig { get; set; }
     public Uri ISOLocation { get; set; }
+    [Newtonsoft.Json.JsonConverter(typeof(UriConverter))]
+    public Uri DeploymentDir { get; set; }
 
     public string Organization { get; set; }
     public string Product { get; set; }
